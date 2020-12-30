@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(https://i.dlpng.com/static/png/6326693_preview.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.slider{
+    width: 60%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    ul{
+        list-style: none;
+        display: flex;
+        // width: 6400px;
+        position: relative;
+        left: 0;
+        transition: 2s ease-in-out;
+        li{
+            img{
+                width: 100%;
+                vertical-align: middle;
+                
+            }
+        }
+    }
+    .prev,.next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+        background-color: #fff;
+        cursor: pointer;
+        font-size: 25px;
+        color:rgb(252, 0, 189);
+        padding: 5px 15px;
+        transition: .5s ease-in-out;
+        &:hover{
+            background-color:rgb(252, 0, 189) ;
+            color: #fff;
+        }
+    }
+    .prev{
+        left: 5px;
+    }
+    .next{
+        right: 5px;
+    }
+    .dots{
+        display: flex;
+        justify-content: center;
+        .dot-item{
+            width: 20px;
+            height: 20px;
+            background-image: radial-gradient(circle, red, pink, green,yellow);
+            border-radius: 50%;
+            margin: 0 5px;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background-color:#fff;
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
